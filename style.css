@@ -42,9 +42,9 @@ body {
   display: block;
   color: white;
   padding: 5px;
-  margin: 20px 30px 0 0;
+  margin: 15px 30px 0 0;
   width: 80px;
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 300;
   text-align: center;
   text-decoration: none;
@@ -121,7 +121,7 @@ body {
   width: 100%;
   min-height: 500px;
   max-height: 1100px;
-  background: url(picture/back2.jpg) no-repeat center center fixed;
+  background: url(picture/fundo.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -162,19 +162,19 @@ body {
 }
 
 .name p {
-  font-size: 18px;
+  font-size: 23px;
   color: white;
   font-weight: 300;
 }
 
 .social-media {
-  top: 25px;
+  top: 45px;
 }
 
 .social-media img {
   max-width: 50px;
   max-height: 50px;
-  margin: 0 10px 0 10px;
+  margin: 0 15px 0 10px;
 }
 
 #about-catcher {
