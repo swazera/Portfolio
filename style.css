@@ -58,7 +58,7 @@ body {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #ff9800;
+  background-color: #00ffd5;
   visibility: hidden;
   transform: scaleX(0);
   transition: all 0.3s ease-in-out;
@@ -70,7 +70,7 @@ body {
 }
 
 .navbar li a:hover {
-  color: #ff9800;
+  color: #00ffd5;
 }
 
 @media screen and (max-height:700px) {
@@ -202,7 +202,7 @@ body {
   margin-top: -10px;
   margin-bottom: 20px;
   font-weight: bold;
-  color: #ff9800;
+  color: #00ffd5;
 }
 
 .p-body {
