@@ -182,37 +182,57 @@ body {
 }
 
 .box-2 {
-  margin-top: 30px;
+  position: relative;
+  margin-top: 40px;
+  padding: 60px;
+  background: #555555;
+  color: white;
+  border-radius: 20px;
 }
 
 .name-header {
   font-weight: 800;
-  font-size: 34px;
-}
-
-@media screen and (min-width:1200px) {
-  .name-header {
-    margin-top: 40px;
-  }
-  .p-body {
-    padding-right: 50px;
-  }
-  #about-catcher {
-    margin-bottom: 100px;
-  }
-  #about-tail {
-    margin-top: 80px;
-  }
+  font-size: 3em;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .tag {
-  font-size: 18px;
+  font-size: 1.5em;
   margin-top: -10px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #ff9800;
 }
 
 .p-body {
-  font-size: 18px;
+  font-size: 1.2em;
   margin-top: 25px;
+  line-height: 1.6;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.img2 {
+  position: absolute;
+  top: 50%;
+  right: 50px;
+  transform: translateY(-50%);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.img2 img {
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .img2 {
+    position: static;
+    transform: none;
+    margin-top: 20px;
+  }
 }
 
 .box-3 {
@@ -285,6 +305,6 @@ body {
 
 .img2 {
   width: 320px;
-  height: 100px;
+  height: 500px;
   margin-left: 600px;
 }
