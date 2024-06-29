@@ -1,25 +1,27 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,900);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 body {
   font-family: 'Roboto', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
 }
 
 .watermark-1 {
-  position:absolute;
-  top:2px;
-  left:1px;
-  color:white;
-  font-weight:100;
-  font-size:10px;
+  position: absolute;
+  top: 2px;
+  left: 1px;
+  color: white;
+  font-weight: 100;
+  font-size: 10px;
 }
 
 .watermark-2 {
-  position:absolute;
-  bottom:-5px;
-  right:5px;
-  color:white;
-  font-weight:100;
-  font-size:10px;
+  position: absolute;
+  bottom: -5px;
+  right: 5px;
+  color: white;
+  font-weight: 100;
+  font-size: 10px;
 }
 
 .navbar {
@@ -242,20 +244,74 @@ body {
 
 .project-header {
   margin: 40px 0 50px 0;
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
 }
 
-.proj-first div,
-.proj-second div {
-  margin-bottom: 30px;
+.card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  padding: 0;
+  margin: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  background-color: #fff;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-bottom: 2px solid #ddd;
+}
+
+.card-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 10px 0;
+  color: #333;
+}
+
+.card-description {
+  font-size: 16px;
+  color: #777;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.card a {
+  text-decoration: none;
+  color: #007BFF;
+  font-weight: 500;
+}
+
+.card a:hover {
+  color: #0056b3;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card:nth-child(4) {
+  order: 3;
+}
+
+.card:nth-child(3) {
+  order: 4;
 }
 
 .footer {
   width: 100%;
   color: #fefefe;
-}
-
-.box-4 {
-  width: 100%;
   background-color: #1d5067;
   padding-top: 30px;
   padding-bottom: 20px;
@@ -283,7 +339,7 @@ body {
   padding-bottom: 20px;
 }
 
-.box-4 img {
+.footer-social-media img {
   width: 50px;
   height: 50px;
   margin-left: 5px;
@@ -308,4 +364,3 @@ body {
   height: 500px;
   margin-left: 600px;
 }
-

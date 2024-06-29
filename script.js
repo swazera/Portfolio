@@ -10,7 +10,6 @@ $(document).ready(function() {
   });
   windowHeight = $(window).innerHeight();
   $(window).scroll(function () {
-      console.log($(window).scrollTop())
     if ($(window).scrollTop() > windowHeight) {
       $('.navbar').addClass('navbar-fixed');
     }
@@ -35,17 +34,61 @@ $(function() {
   });
 });
 
-const username = "swazera";
+const username = 'swazera';
 
 function fetchRepos() {
   fetch(`https://api.github.com/users/${username}/repos`)
     .then((response) => response.json())
     .then((data) => {
-      data.forEach((repo) => {
-        console.log(repo.name);
-      });
+      localStorage.setItem("projects", JSON.stringify(data));
+      renderRepos();
     })
     .catch((error) => console.error("Erro:", error));
 }
 
-fetchRepos();
+function renderRepos() {
+  let projects = localStorage.getItem('projects');
+  projects = JSON.parse(projects);
+
+  const cardContainer = document.getElementById('card-container');
+  cardContainer.innerHTML = '';
+
+  projects.forEach((project, index) => {
+    const card = document.createElement('div');
+    card.className = 'card col-lg-3 col-md-4 col-sm-6 col-xs-12';
+
+    const cardBody = document.createElement('div');
+    cardBody.className = 'card-body';
+
+    const cardTitle = document.createElement('h3');
+    cardTitle.className = 'card-title';
+    cardTitle.textContent = project.name;
+    cardBody.appendChild(cardTitle);
+
+    const cardDescription = document.createElement('p');
+    cardDescription.className = 'card-description';
+    cardDescription.textContent = project.description || 'No description available';
+    cardBody.appendChild(cardDescription);
+
+    const cardLink = document.createElement('a');
+    cardLink.href = project.html_url;
+    cardLink.target = '_blank';
+    cardLink.textContent = 'View Project';
+    cardBody.appendChild(cardLink);
+
+    card.appendChild(cardBody);
+
+    cardContainer.appendChild(card);
+  });
+
+  const cepCard = document.querySelector('.cep-card');
+  if (cepCard) {
+    cardContainer.appendChild(cepCard);
+  }
+}
+
+if (!localStorage.getItem('projects')) {
+  fetchRepos();
+} else {
+  renderRepos();
+}
